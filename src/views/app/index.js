@@ -4,19 +4,14 @@ import { connect } from 'react-redux';
 
 import AppLayout from '../../layout/AppLayout';
 
-const Dashboards = React.lazy(() =>
-  import(/* webpackChunkName: "dashboards" */ './dashboards')
+const Gogo = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-gogo" */ './gogo')
 );
-const Pages = React.lazy(() =>
-  import(/* webpackChunkName: "pages" */ './pages')
+const SecondMenu = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
 );
-const Applications = React.lazy(() =>
-  import(/* webpackChunkName: "applications" */ './applications')
-);
-const Ui = React.lazy(() => import(/* webpackChunkName: "ui" */ './ui'));
-const Menu = React.lazy(() => import(/* webpackChunkName: "menu" */ './menu'));
 const BlankPage = React.lazy(() =>
-  import(/* webpackChunkName: "blank-page" */ './blank-page')
+  import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
 );
 
 class App extends Component {
@@ -28,30 +23,14 @@ class App extends Component {
         <div className="dashboard-wrapper">
           <Suspense fallback={<div className="loading" />}>
             <Switch>
-              <Redirect
-                exact
-                from={`${match.url}/`}
-                to={`${match.url}/dashboards`}
+              <Redirect exact from={`${match.url}/`} to={`${match.url}/gogo`} />
+              <Route
+                path={`${match.url}/gogo`}
+                render={props => <Gogo {...props} />}
               />
               <Route
-                path={`${match.url}/dashboards`}
-                render={props => <Dashboards {...props} />}
-              />
-              <Route
-                path={`${match.url}/applications`}
-                render={props => <Applications {...props} />}
-              />
-              <Route
-                path={`${match.url}/pages`}
-                render={props => <Pages {...props} />}
-              />
-              <Route
-                path={`${match.url}/ui`}
-                render={props => <Ui {...props} />}
-              />
-              <Route
-                path={`${match.url}/menu`}
-                render={props => <Menu {...props} />}
+                path={`${match.url}/second-menu`}
+                render={props => <SecondMenu {...props} />}
               />
               <Route
                 path={`${match.url}/blank-page`}

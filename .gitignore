@@ -61,6 +61,4 @@ typings/
 .next
 
 build/
-
-TODO
-.history
+.history/
