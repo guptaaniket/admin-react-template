@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { injectIntl } from "react-intl";
-
 import {
   UncontrolledDropdown,
   DropdownItem,
@@ -33,6 +32,7 @@ import TopnavNotifications from "./Topnav.Notifications";
 import TopnavDarkSwitch from "./Topnav.DarkSwitch";
 
 import { getDirection, setDirection } from "../../helpers/Utils";
+
 class TopNav extends Component {
   constructor(props) {
     super(props);
@@ -54,6 +54,7 @@ class TopNav extends Component {
       }, 500);
     }
   };
+
   isInFullScreen = () => {
     return (
       (document.fullscreenElement && document.fullscreenElement !== null) ||
@@ -242,7 +243,8 @@ class TopNav extends Component {
                 caret
                 color="light"
                 size="sm"
-                className="language-button">
+                className="language-button"
+              >
                 <span className="name">{locale.toUpperCase()}</span>
               </DropdownToggle>
               <DropdownMenu className="mt-3" right>
@@ -273,10 +275,11 @@ class TopNav extends Component {
           <span className="logo d-none d-xs-block" />
           <span className="logo-mobile d-block d-xs-none" />
         </a>
-
         <div className="navbar-right">
-          {isDarkSwitchActive && <TopnavDarkSwitch/>}
+          {isDarkSwitchActive && <TopnavDarkSwitch />}
+
           <div className="header-icons d-inline-block align-middle">
+
             <TopnavEasyAccess />
             <TopnavNotifications />
             <button
@@ -288,8 +291,8 @@ class TopNav extends Component {
               {this.state.isInFullScreen ? (
                 <i className="simple-icon-size-actual d-block" />
               ) : (
-                <i className="simple-icon-size-fullscreen d-block" />
-              )}
+                  <i className="simple-icon-size-fullscreen d-block" />
+                )}
             </button>
           </div>
           <div className="user d-inline-block">
