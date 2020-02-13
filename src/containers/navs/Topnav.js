@@ -272,6 +272,7 @@ class TopNav extends Component {
           </div> */}
         </div>
         <a className="navbar-logo" href="/">
+          <img></img>
           <span className="logo d-none d-xs-block" />
           <span className="logo-mobile d-block d-xs-none" />
         </a>
