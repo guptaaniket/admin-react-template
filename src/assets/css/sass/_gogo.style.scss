@@ -53,21 +53,21 @@ Table of Contents
 /* 00.Variables and Imports */
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700");
 
-$main-menu-item-height: 110px;
-$main-menu-width: 120px;
-$main-menu-width-lg: 110px;
-$main-menu-width-md: 100px;
-$main-menu-width-xs: 90px;
+$main-menu-item-height:80px;
+$main-menu-width: 80px;
+$main-menu-width-lg: 80px;
+$main-menu-width-md: 800px;
+$main-menu-width-xs: 80px;
 
 $sub-menu-width: 230px;
 $sub-menu-width-lg: 230px;
 $sub-menu-width-md: 230px;
 $sub-menu-width-xs: 230px;
 
-$navbar-height: 100px;
+$navbar-height: 80px;
 $navbar-height-xs: 70px;
-$navbar-height-md: 80px;
-$navbar-height-lg: 90px;
+$navbar-height-md: 70px;
+$navbar-height-lg: 70px;
 
 $main-margin: 60px;
 $main-margin-lg: 50px;
@@ -1581,7 +1581,7 @@ button {
 .navbar {
   background: $foreground-color;
   height: $navbar-height;
-  padding: 1.5rem 0;
+  // padding: 1.5rem 0;
   @include depth(1);
 
   #notificationDropdown {
@@ -2020,7 +2020,7 @@ button {
       }
 
       i {
-        font-size: 32px;
+        font-size: 25px;
         line-height: 42px;
       }
 
@@ -2034,7 +2034,7 @@ button {
         border-radius: 10px;
         position: absolute;
         width: 6px;
-        height: 90px;
+        height: 70px;
         top: 50%;
         transform: translateY(-50%);
         left: 0;
